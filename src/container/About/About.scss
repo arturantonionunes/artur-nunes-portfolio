@@ -5,34 +5,48 @@
 }
 
 .app__profiles {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 }
 
 .app__profile-item {
-  width: 190px;
+  flex: 1;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   margin: 2rem;
 
-  img {
-    width: 100%;
-    height: 170px;
-    border-radius: 15px;
-    object-fit: cover;
+  .profile-title {
+    text-align: center;
+    color: var(--secondary-color);
+  }
+  .profile-p {
+    text-align: justify;
+    color: #fff;
   }
 
-  /*  @media screen and (min-width: 2000px) {
+  img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: contain;
+  }
+
+  @media screen and (min-width: 2000px) {
     width: 370px;
     margin: 2rem 4rem;
 
     img {
       height: 320px;
     }
-  } */
+  }
 }

@@ -4,10 +4,6 @@
   // disable the default padding styles
   .app__wrapper {
     padding: 0;
-
-    .copyright {
-      display: none;
-    }
   }
 }
 
@@ -49,9 +45,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
+  z-index: 2;
 
   margin: 0 2rem;
-  z-index: 2;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
@@ -69,20 +65,12 @@
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
 
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-    h1 {
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-    }
-    p {
-      color: var(--white-color);
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-      font-size: 1.1rem;
-    }
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
 
   .tag-cmp {
@@ -90,15 +78,18 @@
     margin-top: 3rem;
 
     p {
-      color: var(--white-color);
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+      font-weight: bold;
     }
   }
-
+  h2 {
+    font-weight: bold;
+  }
   span {
     font-size: 2.5rem;
+    text-shadow: 1px 1px 4px #000;
 
     @media screen and (min-width: 2000px) {
       font-size: 5rem;
@@ -126,12 +117,12 @@
     height: 100px;
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    background: transparent;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
 
     img {
-      width: 70%;
-      height: 70%;
+      width: 60%;
+      height: 60%;
     }
   }
 
@@ -143,14 +134,14 @@
   }
 
   div:nth-child(2) {
-    margin: 1.75rem;
+    margin: 1rem 3.75rem;
     width: 150px;
     height: 150px;
   }
 
   div:nth-child(3) {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
   }
 
   @media screen and (min-width: 2000px) {
@@ -171,29 +162,27 @@
   }
 
   @media screen and (max-width: 1200px) {
-    height: 80%;
-    position: absolute;
-    right: 0;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-left: 0;
-    justify-content: flex-end;
 
-    div:nth-child(2) {
-      width: 100px;
-      height: 100px;
+    div {
+      margin: 1rem;
     }
-
-    div:nth-child(3) {
+    div:nth-child(1) {
       width: 70px;
       height: 70px;
     }
 
-    div:nth-child(1) {
-      width: 50px;
-      height: 50px;
+    div:nth-child(2) {
+      width: 95px;
+      height: 95px;
     }
 
-    div {
-      margin: 1rem;
+    div:nth-child(3) {
+      width: 55px;
+      height: 55px;
     }
   }
 }
@@ -205,7 +194,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  position: relative;
+  bottom: 0;
 
   img {
     width: 100%;
@@ -224,6 +213,8 @@
   }
 
   @media screen and (max-width: 1200px) {
-    margin: 2rem 0;
+    margin: 0;
+    padding: 0;
+    order: 1;
   }
 }

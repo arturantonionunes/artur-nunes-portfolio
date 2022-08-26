@@ -1,0 +1,69 @@
+.app__foot {
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px 30px 80px;
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    p {
+      font-size: 1rem;
+      color: var(--white-color);
+    }
+    p:nth-child(2) {
+      color: var(--secondary-color);
+    }
+    @media screen and (max-width: 768px) {
+      padding-top: 20px;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 0.65rem;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      p {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  .app__foot-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+      color: var(--white-color);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+
+      span {
+        color: var(--secondary-color);
+      }
+    }
+
+    p {
+      color: var(--white-color);
+      margin-top: -5px;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      letter-spacing: 5px;
+      font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    flex-direction: column-reverse;
+  }
+}
